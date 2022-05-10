@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void main()
+{
+int TAM,aux[TAM],vetor[TAM];
+    printf(" digite o numero de elementos do vetor "); scanf("%i", &TAM);
+    for( int i = 0; i < TAM ; i++){
+        printf(" digite o elemento %i : ", i); scanf("%i", &vetor[i]);
+    }
+     printf("\nvetor inicial \n");
+     for( int i = 0; i < TAM ; i++){
+        printf("%i  ", vetor[i]);
+    }
+    for( int i = 0; i < TAM ; i++){
+        int j;
+        j = TAM - 1 -i;
+        aux[i] = vetor[i];
+        vetor[i] = vetor[j];
+
+     }
+      for( int i = 0; i < TAM ; i++){
+        int j;
+        j = TAM - 1 -i;
+        vetor[j] = aux[i];
+
+     }
+
+     printf("\nnovo vetor \n");
+    for( int i = 0; i < TAM ; i++){
+        printf("%i ", vetor[i]);
+    }
+}
